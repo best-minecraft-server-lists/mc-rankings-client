@@ -76,14 +76,14 @@ for (const [site, feed] of Object.entries(feeds)) {
 ```js
 import { getServer } from "mc-rankings-client";
 
-const server = await getServer("skyblock", "talonmc");
+const server = await getServer("skyblock", "hypixel");
 
 if (server) {
-  console.log(server.rank);       // 1
-  console.log(server.players);    // 1661
-  console.log(server.average7d);  // 1565
-  console.log(server.range24h);   // { low: 1498, high: 1639 }
-  console.log(server.listingUrl); // https://bestskyblockservers.net/server/talonmc
+  console.log(server.rank);       // 2
+  console.log(server.players);    // 31916
+  console.log(server.average7d);  // 26096
+  console.log(server.range24h);   // { low: 21344, high: 31916 }
+  console.log(server.listingUrl); // https://bestskyblockservers.net/server/hypixel
 }
 ```
 
