@@ -1,4 +1,4 @@
-# mc-rankings-client — Free Minecraft Server Rankings API Client
+# mc-rankings-client - Free Minecraft Server Rankings API Client
 
 [![CI](https://github.com/best-minecraft-server-lists/mc-rankings-client/actions/workflows/ci.yml/badge.svg)](https://github.com/best-minecraft-server-lists/mc-rankings-client/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/mc-rankings-client.svg)](https://www.npmjs.com/package/mc-rankings-client)
@@ -117,7 +117,7 @@ import { RankingsClient, attributionFor } from "mc-rankings-client";
 
 const feed = await new RankingsClient().getPrison();
 const rows = feed.servers
-  .map((server) => `<li><a href="${server.listingUrl}">${server.name}</a> — ${server.players} online</li>`)
+  .map((server) => `<li><a href="${server.listingUrl}">${server.name}</a> - ${server.players} online</li>`)
   .join("");
 
 const html = `<ol>${rows}</ol><p class="credit">${attributionFor(feed).html}</p>`;
@@ -200,7 +200,7 @@ These use a shared default client with a five-minute cache.
 | `timeout` | `number` | `10000` | Per-request timeout. |
 | `userAgent` | `string` | `"mc-rankings-client"` | Sent on every request. Set something identifying if you poll often. |
 | `fetch` | `FetchLike` | global `fetch` | Inject your own for tests or a proxy. |
-| `baseUrls` | `Partial<Record<Site, string>>` | — | Override a site's origin. |
+| `baseUrls` | `Partial<Record<Site, string>>` | - | Override a site's origin. |
 | `path` | `string` | `"/api/rankings.json"` | Override the feed path. |
 
 Methods: `get(site, { force })`, `getCobblemon()`, `getPrison()`, `getSkyblock()`, `getSmp()`, `getSurvival()`, `getAll({ force })`, `getServer(site, slug)`, `getTop(site, count)`, `feedUrl(site)`, `clearCache(site?)`.
@@ -267,18 +267,18 @@ Returns `{ text, html }` crediting the source under its declared licence.
 
 Built and maintained by [Best Minecraft Server Lists](https://bestcobblemonservers.net). Every ranking below is ordered on player counts taken from a direct server ping, never on numbers a server reports about itself.
 
-- [Best Cobblemon servers](https://bestcobblemonservers.net) — Cobblemon servers ranked on live player counts, with a full Pokédex and free server tools
-- [Best Minecraft Prison servers](https://bestprisonservers.com) — the top 10 prison servers, ranked weekly on counts pinged directly from each server
-- [Best Minecraft Skyblock servers](https://bestskyblockservers.net) — the top 10 skyblock servers, ranked weekly, with 24-hour highs and 7-day averages on every entry
-- [Best Minecraft SMP servers](https://bestsmpservers.com) — the top 10 SMP servers, ranked weekly, showing Java and Bedrock support and the versions each accepts
-- [Best Minecraft Survival servers](https://bestsurvivalservers.com) — the top 10 survival servers, ranked weekly, each showing when its count was last verified
-- [Free rankings JSON API](https://bestprisonservers.com/api/rankings.json) — every ranking above as JSON, CC BY 4.0, no key and no sign-up
+- [Best Cobblemon servers](https://bestcobblemonservers.net) - The Best Cobblemon Servers, Top 10, Rated by the players
+- [Best Minecraft Prison servers](https://bestprisonservers.com) - The Best Prison Servers, Top 10, Rated by the players
+- [Best Minecraft Skyblock servers](https://bestskyblockservers.net) - The Best Skyblock Servers, Top 10, Rated by the players
+- [Best Minecraft SMP servers](https://bestsmpservers.com) - The Best SMP Servers, Top 10, Rated by the players
+- [Best Minecraft Survival servers](https://bestsurvivalservers.com) - The Best Survival Servers, Top 10, Rated by the players
+- [Free rankings JSON API](https://bestprisonservers.com/api/rankings.json) - Every ranking above as JSON, CC BY 4.0, no key and no sign-up
 
 Sister libraries:
 
-- [mc-status](https://github.com/best-minecraft-server-lists/mc-status) — ping a Java or Bedrock server for players, version and MOTD
-- [mc-motd](https://github.com/best-minecraft-server-lists/motd-parser) — render a MOTD to ANSI, HTML or plain text
-- [mc-votifier](https://github.com/best-minecraft-server-lists/votifier-client) — send and receive Votifier votes
+- [mc-status](https://github.com/best-minecraft-server-lists/mc-status) - ping a Java or Bedrock server for players, version and MOTD
+- [mc-motd](https://github.com/best-minecraft-server-lists/motd-parser) - render a MOTD to ANSI, HTML or plain text
+- [mc-votifier](https://github.com/best-minecraft-server-lists/votifier-client) - send and receive Votifier votes
 
 ## Contributing
 
