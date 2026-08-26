@@ -1,0 +1,55 @@
+{
+  "name": "mc-rankings-client",
+  "version": "1.0.0",
+  "description": "Typed client for the Best Minecraft Server Lists rankings feeds. Fetch live-pinged Minecraft server rankings for Cobblemon, Prison, Skyblock, SMP and Survival as CC BY 4.0 JSON, with caching built in. Zero dependencies.",
+  "keywords": [
+    "minecraft",
+    "minecraft-servers",
+    "server-list",
+    "rankings",
+    "minecraft-api",
+    "cobblemon",
+    "skyblock",
+    "prison",
+    "survival",
+    "typescript"
+  ],
+  "homepage": "https://github.com/best-minecraft-server-lists/mc-rankings-client#readme",
+  "bugs": "https://github.com/best-minecraft-server-lists/mc-rankings-client/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/best-minecraft-server-lists/mc-rankings-client.git"
+  },
+  "license": "MIT",
+  "author": "Best Minecraft Server Lists",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "mc-rankings": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
